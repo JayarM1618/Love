@@ -34,7 +34,6 @@
             transform: translate(-50%, -50%);
             }
 
-
         p {
             font-size: 18px;
             z-index: 1; /* Ensures the text is above the video */
@@ -64,9 +63,10 @@
             transition: background-color 0.3s ease-in-out;
             z-index: 1;
             position: absolute;
-            top: 50%;
+            top: 70%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
+            cursor: pointer;
         }
 
         .next-page-button:hover {
@@ -84,7 +84,19 @@
     <!-- Content on top of the video -->
     <h1>HI LOVE</h1>
 
-    <!-- Button to navigate to the next page -->
-    <a href="Page 2" class="next-page-button">Next Page</a>
+    <!-- Button to ask a question and choose an answer -->
+    <div class="next-page-button" onclick="askQuestion()">Ask a Question</div>
+
+    <!-- JavaScript for the interactive question -->
+    <script>
+        function askQuestion() {
+            var answer = prompt("What is your favorite color?");
+            if (answer !== null) {
+                alert("You chose: " + answer);
+                // Here you can add logic to handle the chosen answer and navigate to the next page.
+                // For now, we'll display an alert with the chosen answer.
+            }
+        }
+    </script>
 </body>
 </html>
