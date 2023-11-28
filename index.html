@@ -8,29 +8,46 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
-            background-image: url('Untitled video - Made with Clipchamp (1) (1) (2).mp4');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
+            padding: 0;
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars due to the video */
         }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
         h1 {
             color: red;
+            z-index: 1; /* Ensures the text is above the video */
         }
+
         p {
             font-size: 18px;
+            z-index: 1; /* Ensures the text is above the video */
         }
+
         img {
             width: 300px;
             height: 300px;
             border-radius: 50%;
             margin: 20px;
             transition: transform 0.3s ease-in-out;
+            z-index: 1; /* Ensures the image is above the video */
         }
+
         img:hover {
             transform: scale(1.1);
         }
+
         .next-page-button {
             background-color: red;
             color: white;
@@ -40,15 +57,24 @@
             font-weight: bold;
             font-size: 16px;
             transition: background-color 0.3s ease-in-out;
+            z-index: 1; /* Ensures the button is above the video */
         }
+
         .next-page-button:hover {
             background-color: darkred;
         }
     </style>
 </head>
 <body>
+    <!-- Video element -->
+    <video autoplay muted loop>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content on top of the video -->
     <h1>HI LOVE</h1>
-    
+
     <!-- Button to navigate to the next page -->
     <a href="next-page.html" class="next-page-button">Next Page</a>
 </body>
