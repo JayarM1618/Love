@@ -54,7 +54,7 @@
         }
 
         .next-page-button {
-            background-color: Black;
+            background-color: black;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -62,7 +62,11 @@
             font-weight: bold;
             font-size: 16px;
             transition: background-color 0.3s ease-in-out;
-            z-index: 1; /* Ensures the button is above the video */
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .next-page-button:hover {
