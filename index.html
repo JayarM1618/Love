@@ -9,6 +9,11 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            background-image: url('your-background-image-url.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
         }
         h1 {
             color: red;
@@ -26,6 +31,19 @@
         img:hover {
             transform: scale(1.1);
         }
+        .next-page-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .next-page-button:hover {
+            background-color: darkred;
+        }
     </style>
 </head>
 <body>
@@ -33,5 +51,8 @@
     <img src="your-image-url.jpg" alt="Love Image">
     <p>This is a simple HTML page dedicated to the wonderful feeling of love. Love is a beautiful and powerful emotion that connects us all.</p>
     <p>Share love, spread joy, and make the world a better place!</p>
+    
+    <!-- Button to navigate to the next page -->
+    <a href="next-page.html" class="next-page-button">Next Page</a>
 </body>
 </html>
