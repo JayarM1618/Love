@@ -45,6 +45,15 @@
         img:hover {
             transform: scale(1.1);
         }
+         button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -56,5 +65,13 @@
 
     <!-- Content on top of the video -->
     <h1>HI LOVE</h1>
+    
+     <button onclick="goToAnotherPage()">CLICK THIS</button>
+    <script>
+        function goToAnotherPage() {
+            // Change 'another-page.html' to the actual URL of the page you want to navigate to
+            window.location.href = 'another-page.html';
+        }
+    </script>
 </body>
 </html>
